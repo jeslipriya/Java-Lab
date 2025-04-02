@@ -1,3 +1,5 @@
 # Java Laboratory
 
-## Lab Programs - Java
+## Java Programs
+
+### Advanced Java Programs
