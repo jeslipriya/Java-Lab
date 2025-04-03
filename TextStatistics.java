@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class TextStatistics {
     public static void main(String[] args) {
-        String filepath = "C:/Users/jesli/OneDrive/Desktop/Java-Lab/Demo.txt";
+        String filepath = "C:/Users/jesli/OneDrive/Desktop/Java-Lab/Demo0.txt";
         try(BufferedReader reader = new BufferedReader(new FileReader(filepath))){
             String line;
             int wordCount = 0;
@@ -23,7 +23,7 @@ public class TextStatistics {
         }
 
         catch(IOException e){
-            e.printStackTrace();
+            System.err.println(e);
         }
     }
 }
