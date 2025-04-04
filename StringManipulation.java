@@ -26,7 +26,7 @@ public class StringManipulation {
         System.out.println("Enter the second String: ");
         String secondString = scan.nextLine();
 
-        String concatenated = firstString + secondString;
+        String concatenated = firstString + " " + secondString;
         System.out.println("The concatenated string is \n" + concatenated);
         
         scan.close();
