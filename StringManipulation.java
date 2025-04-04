@@ -30,6 +30,10 @@ public class StringManipulation {
             System.out.println("The concatenated string is \n" + concatenated);
             
         }
+
+        catch(Exception e){
+            System.out.println("Please enter String as Input!");
+        }
     
     }
 }
