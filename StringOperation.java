@@ -10,7 +10,7 @@ public class StringOperation {
         System.out.println("Enter the second string:");
         String str2 = scan.nextLine();
 
-        String concatenated = str1 + str2;
+        String concatenated = str1 + " " + str2;
         System.out.println("Concatenated string\n" + concatenated);
 
         System.out.println("Enter a substring to search: ");
