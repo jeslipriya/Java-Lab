@@ -36,5 +36,9 @@ public class StringOperation {
             else{System.out.println("Invalid indices!");}
 
         }
+
+        catch(Exception e){
+            System.out.println("Please Enter String as Input!");
+        }
     }
 }
