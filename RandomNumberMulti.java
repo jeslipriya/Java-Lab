@@ -10,11 +10,13 @@ class NumberGenerator extends Thread{
     @Override
     public void run(){
         Random random = new Random();
+        int count = 0;
 
-        while (true) { 
+        while (count<10) { 
             int number = random.nextInt(100);
             System.out.println("Generated: " + number);
             processor.processNumber(number);
+            count++;
             
             try {
                 Thread.sleep(1000);
@@ -22,14 +24,21 @@ class NumberGenerator extends Thread{
                 break;
             }
         }
+        processor.setDone();
     }
 }
 
 class NumberProcessor{
     private int number;
+    private boolean done = false;
 
     public synchronized void processNumber(int number){
         this.number = number;
+        notifyAll();
+    }
+
+    public synchronized void setDone(){
+        done = true;
         notifyAll();
     }
 
@@ -38,6 +47,7 @@ class NumberProcessor{
             synchronized (this) {
                 try {
                     wait();
+                    if (done) break;
                     if (number%2 == 0) {
                         System.out.println("Square: " + (number*number));
                     }
@@ -55,6 +65,7 @@ class NumberProcessor{
             synchronized (this) {
                 try {
                     wait();
+                    if (done) break;
                     if (number%2 != 0) {
                         System.out.println("Cube: " + (number*number*number));
                     }
