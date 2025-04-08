@@ -43,5 +43,9 @@ public class ExceptionDemo {
             System.out.println("Array size cannot be negative!");
         }
     }
+
+    catch(Exception e){
+        System.out.println(e);
+    }
     }
 }
