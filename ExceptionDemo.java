@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExceptionDemo {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        try (Scanner scan = new Scanner(System.in)){
 
         //Arithmetic exception
         try {
@@ -42,6 +42,6 @@ public class ExceptionDemo {
         } catch (NegativeArraySizeException e) {
             System.out.println("Array size cannot be negative!");
         }
-        scan.close();
+    }
     }
 }
