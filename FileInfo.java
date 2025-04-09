@@ -3,7 +3,7 @@ import java.io.File;
 
 public class FileInfo {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        try(Scanner scan = new Scanner(System.in)){
 
         System.out.println("Enter the file name");
         String fileName = scan.nextLine();
@@ -19,7 +19,11 @@ public class FileInfo {
         }
 
         else{System.out.println("File Exists: No");}
+    }
 
-        scan.close();
+    catch(Exception e){
+        System.out.println("Please enter the file name!");
+    }
+        
     }
 }
