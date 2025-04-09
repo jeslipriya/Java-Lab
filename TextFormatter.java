@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.text.AttributeSet;
+
 public class TextFormatter extends JFrame {
     private JTextField textField;
     private JTextArea textArea;
@@ -40,7 +40,6 @@ public class TextFormatter extends JFrame {
         String text = textField.getText();
         textArea.setText(text);
         textArea.setFont(new Font("Arial",Font.PLAIN,16));
-        textArea.setText(text.toUpperCase());
     }
     public static void main(String[] args) {
         new TextFormatter();       
