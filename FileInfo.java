@@ -22,7 +22,7 @@ public class FileInfo {
     }
 
     catch(Exception e){
-        System.out.println("Please enter the file name!");
+        System.out.println("Error: " + e.getMessage());
     }
         
     }
