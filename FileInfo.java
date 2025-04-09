@@ -19,5 +19,7 @@ public class FileInfo {
         }
 
         else{System.out.println("File Exists: No");}
+
+        scan.close();
     }
 }
