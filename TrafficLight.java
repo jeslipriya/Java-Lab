@@ -5,7 +5,7 @@ public class TrafficLight extends JFrame {
     private JLabel messageLabel;
 
     public TrafficLight(){
-        setTitle("Traffic Light Stimulator");
+        setTitle("Traffic Light Simulator");
         setSize(400,400);
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
